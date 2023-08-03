@@ -1,8 +1,11 @@
 package com.goCash.entities;
 
 import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,4 +19,6 @@ public abstract class BaseEntity {
     @GeneratedValue(generator = "id",
             strategy = GenerationType.SEQUENCE)
     private Long id;
+    @CreatedDate
+    private Timestamp createdAt;
 }
