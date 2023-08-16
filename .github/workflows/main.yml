@@ -1,12 +1,15 @@
 name: Build & Deploy goCash Api
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - '*'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+
 
 jobs:
   build-deploy:
